@@ -1,11 +1,6 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Bienvenidos</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-menu [content]="content">  
   <ion-content>
+    <img src="https://cdne.diariocorreo.pe/thumbs/uploads/articles/images/piura-festival-regional-de-dan-jpg_604x0.jpg">
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
