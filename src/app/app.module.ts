@@ -29,8 +29,8 @@ import { StreamingMedia } from '@ionic-native/streaming-media';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    StreamingMedia
+    StreamingMedia,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
