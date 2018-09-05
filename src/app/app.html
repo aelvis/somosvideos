@@ -1,10 +1,16 @@
 <ion-menu [content]="content">  
   <ion-content style="background: #d9d4c9;">
-    <img src="https://cdne.diariocorreo.pe/thumbs/uploads/articles/images/piura-festival-regional-de-dan-jpg_604x0.jpg">
+    <img src="../../assets/imgs/header.jpeg">
     <ion-list no-lines>
       <button style="background: #d9d4c9;" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         <ion-icon name="{{p.icon}}" item-start style="color: #7a2d73"></ion-icon>
         {{p.title}}
+      </button>
+    </ion-list>
+    <ion-list>
+      <button style="background: #d9d4c9;" menuClose ion-item  (click)="shareImg()">
+        <ion-icon name="share" item-start style="color: #7a2d73"></ion-icon>
+        Compartir Aplicación
       </button>
     </ion-list>
   </ion-content>
