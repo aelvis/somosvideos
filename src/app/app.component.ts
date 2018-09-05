@@ -46,7 +46,7 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
   saveImg() {
-    let imageName = "FreakyJolly.jpg";
+    let imageName = "fondo.jpeg";
     const ROOT_DIRECTORY = 'file:///sdcard//';
     const downloadFolderName = 'tempDownloadFolder';
     
@@ -73,7 +73,7 @@ export class MyApp {
   }
  
   shareImg() { 
-    let imageName = "FreakyJolly.jpg";
+    let imageName = "fondo.jpeg";
     const ROOT_DIRECTORY = 'file:///sdcard//';
     const downloadFolderName = 'tempDownloadFolder';
     
