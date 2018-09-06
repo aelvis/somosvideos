@@ -1,38 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { StreamingMedia, StreamingVideoOptions, StreamingAudioOptions } from '@ionic-native/streaming-media';
-
+import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  video: string = "https://secure-playlist.livestream.com/streams/13907141_4117932_lsiuzh3hv37qvmycbrw_1/media/13907141_4117932_lsiuzh3hv37qvmycbrw_1@678000pb.m3u8?dw=14400&token=1536346305_436d326fae2c1f82ce27383f5e9ee380bf797b9d&ts=1536170400";
   constructor(public navCtrl: NavController,private streamingMedia: StreamingMedia) {
 
   }
-	startVideo() {
+  loadvideo(){
+    
     let options: StreamingVideoOptions = {
-      successCallback: () => { console.log('Finished Video') },
-      errorCallback: (e) => { console.log('Error: ', e) },
-      orientation: 'portrait'
+      successCallback: () => { console.log('Video played') },
+      errorCallback: (e) => { console.log('Error streaming') },
+      orientation: 'landscape',
+      shouldAutoClose: true,
+      controls: false
     };
-    // http://www.sample-videos.com/
-    this.streamingMedia.playVideo('http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_30mb.mp4', options);
-  }
- 
-  startAudio() {
-    let options: StreamingAudioOptions = {
-      successCallback: () => { console.log('Finished Audio') },
-      errorCallback: (e) => { console.log('Error: ', e) },
-      initFullscreen: false // iOS only!
-    };
- 
-    //http://soundbible.com/2196-Baby-Music-Box.html
-    this.streamingMedia.playAudio('http://soundbible.com/grab.php?id=2196&type=mp3', options);
-  }
- 
-  stopAudio() {
-    this.streamingMedia.stopAudio();
+
+    this.streamingMedia.playVideo(this.video, options);
   }
 }

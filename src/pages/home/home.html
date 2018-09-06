@@ -8,7 +8,10 @@
 </ion-header>
 
 <ion-content style="background: black">
-  <iframe padding style="width: 100%" id="ls_embed_1534952507" src="https://livestream.com/accounts/10468276/events/3529933/player?width=560&height=315&autoPlay=true&mute=false" width="560" height="315" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-  <img src="../../assets/imgs/fondo.jpeg">
+  <button ion-button (click)="loadvideo()">Aass</button>
+  <ion-row>
+    <video controls="controls" preload="metadata" autoplay="autoplay" controls="false" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+      <source src="{{video}}" type="video/mp4" />
+     </video>
+  </ion-row>
 </ion-content>
