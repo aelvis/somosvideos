@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { AdministracionPage } from '../pages/administracion/administracion';
+import { ProgramacionPage } from '../pages/programacion/programacion';
 import { File } from '@ionic-native/file';
 import { FileOpener } from '@ionic-native/file-opener';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -26,7 +28,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Tv en VIVO', icon: 'videocam' , component: HomePage },
-      { title: 'Contactos', icon: 'list-box', component: ListPage }
+      { title: 'Contactos', icon: 'list-box', component: ListPage },
+      { title: 'Programación', icon: 'paper', component: ProgramacionPage },
+      { title: 'Administración', icon: 'settings', component: AdministracionPage }
     ];
 
   }
@@ -46,7 +50,7 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
   saveImg() {
-    let imageName = "fondo.jpeg";
+    let imageName = "descargar.jpeg";
     const ROOT_DIRECTORY = 'file:///sdcard//';
     const downloadFolderName = 'tempDownloadFolder';
     
@@ -73,7 +77,7 @@ export class MyApp {
   }
  
   shareImg() { 
-    let imageName = "fondo.jpeg";
+    let imageName = "descargar.jpeg";
     const ROOT_DIRECTORY = 'file:///sdcard//';
     const downloadFolderName = 'tempDownloadFolder';
     
@@ -86,7 +90,7 @@ export class MyApp {
           .then((entries) => {
  
             //Common sharing event will open all available application to share
-            this.socialSharing.share("Message","Subject", ROOT_DIRECTORY + downloadFolderName + "/" + imageName, imageName)
+            this.socialSharing.share("Mensaje","Tema", ROOT_DIRECTORY + downloadFolderName + "/" + imageName, imageName)
               .then((entries) => {
                 console.log('success ' + JSON.stringify(entries));
               })

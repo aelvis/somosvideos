@@ -1,0 +1,1 @@
+export { InicioService } from './inicio/inicio';

@@ -6,17 +6,15 @@
     <ion-title>Somos Música</ion-title>
     <ion-buttons right>
     	<button ion-button icon-only  (click)="loadvideo()">
-			<ion-icon name="easel"></ion-icon>
+			<ion-icon name="md-expand"></ion-icon>
 		</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content style="background: black">
+<ion-content  style="background: black">
   <ion-row>
-    <video controls="controls" preload="metadata" autoplay="autoplay" controls="false" webkit-playsinline="webkit-playsinline" class="videoPlayer" width="100%" height="auto">
-      <source src="{{video}}" type="video/mp4" />
-     </video>
+<video x-webkit-airplay="allow" preload="metadata" autoplay="autoplay" width="520" height="292" src="{{cursos}}" autoplay controls ></video>
   </ion-row>
-  <img src="../../assets/imgs/fondo.jpeg" width="100%" height="auto">
+  <img src="../../assets/imgs/fondo.jpg" width="100%" height="auto">
 </ion-content>
