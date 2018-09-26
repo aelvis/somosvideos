@@ -13,13 +13,15 @@ constructor(public navCtrl: NavController,
     private streamingMedia: StreamingMedia,
     private _nav: InicioService){
       this.sd();
+
   }
   sd(){
         this._nav.getCursos().subscribe(
+
       data => { 
           if(data.error){
         }else{
-            this.cursos =  data.data.nombre;
+            this.cursos =  data.data.video;
           }
         }  
     );

@@ -7,17 +7,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-<ion-list>
-
+<ion-content padding>
+  <h3>Enviar Comentarios</h3>
+<ion-list *ngIf="_ini.itemsd_id === 'true'">
   <ion-item>
-    <ion-label color="primary" floating>Floating Label</ion-label>
-    <ion-input></ion-input>
+    <ion-input placeholder="Correo o Celular" clearInput [(ngModel)]="email"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-textarea placeholder="Enter a description"></ion-textarea>
+    <ion-textarea placeholder="Comentario" [(ngModel)]="descripcion"></ion-textarea>
   </ion-item>
-
-</ion-list>
+  <button ion-button block color="light" [disabled]="descripcion.length < 5" (click)="ingresar()">Enviar</button></ion-list>
+  <p *ngIf="_ini.itemsd_id === 'false'">Gracias por dejar su comentario</p>
 </ion-content>

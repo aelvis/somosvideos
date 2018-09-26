@@ -1,1 +1,1 @@
-export const URL_SERVICIOS = "https://service.infoalc.com/";
+export const URL_SERVICIOS = "https://aplicaciones.somosmusica.pe/";
