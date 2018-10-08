@@ -38,7 +38,7 @@ export class MyApp {
   }
   shareImg() {   
             //Common sharing event will open all available application to share
-            this.socialSharing.share("Descarga nuestra App en Play Store como Somos Música","Tema", "https://somosmusica.pe/assets/descargar.jpeg", "https://play.google.com/store/apps/details?id=io.somos.musica")
+            this.socialSharing.share("Descarga nuestra APP en Play Store como Somos Música","Tema", "https://somosmusica.pe/assets/descargar.jpeg", "https://play.google.com/store/apps/details?id=io.somos.musica")
               .then((entries) => {
                 console.log('success ' + JSON.stringify(entries));
               })
