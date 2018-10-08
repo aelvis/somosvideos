@@ -4,7 +4,7 @@ import { InicioService } from '../../servicios/index.services';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
   cursos:string;

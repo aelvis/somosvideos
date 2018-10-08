@@ -1,13 +1,13 @@
 <ion-menu [content]="content">  
-  <ion-content style="background: #d9d4c9;">
+  <ion-content style="background: white;">
     <img src="../../assets/imgs/header.jpeg">
     <ion-list no-lines>
-      <button style="background: #d9d4c9;" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        <ion-icon name="{{p.icon}}" item-start style="color: #7a2d73"></ion-icon>
+      <button style="background: white;" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}" item-start style="color: #fc5b21"></ion-icon>
         {{p.title}}
       </button>
-      <button style="background: #d9d4c9;" menuClose ion-item  (click)="shareImg()">
-        <ion-icon name="share" item-start style="color: #7a2d73"></ion-icon>
+      <button style="background: white;" menuClose ion-item  (click)="shareImg()">
+        <ion-icon name="share" item-start style="color: #fc5b21"></ion-icon>
         Compartir
       </button>
     </ion-list>

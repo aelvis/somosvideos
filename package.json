@@ -1,8 +1,8 @@
 {
   "name": "somosvideos",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Elvis Alcantara",
+  "homepage": "https://elvisalcantara.com",
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
